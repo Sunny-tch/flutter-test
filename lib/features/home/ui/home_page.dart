@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
+import 'package:get/get.dart';
+
+import '../get_controllers/home_get_controller.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
+  HomeGetController getController = Get.put(HomeGetController());
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -356,6 +360,8 @@ class HomePage extends StatelessWidget {
         ),
         bottomNavigationBar: TabBar(
           labelColor: Theme.of(context).colorScheme.onPrimary,
+          unselectedLabelColor:
+              Theme.of(context).colorScheme.onPrimary.withOpacity(0.5),
           tabs: [
             Tab(
               icon: Image.asset(

@@ -33,6 +33,41 @@ class HomePage extends StatelessWidget {
             Divider(
               thickness: 0.5.w,
               color: Theme.of(context).colorScheme.onPrimary.withOpacity(0.1),
+            ),
+            SizedBox(height: 2.h),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 4.w),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/images/joshua_lawrence.png',
+                          height: 6.h,
+                        ),
+                        SizedBox(width: 2.w),
+                        Text('Joshua Lawrence',
+                            style: TextStyle(
+                                fontSize: 2.5.h,
+                                fontWeight: FontWeight.bold,
+                                color:
+                                    Theme.of(context).colorScheme.onPrimary)),
+                        SizedBox(width: 2.w),
+                        Text('@joshua95',
+                            style: TextStyle(
+                                fontSize: 2.h,
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onPrimary
+                                    .withOpacity(0.5))),
+                        Text('.')
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             )
           ],
         ),
